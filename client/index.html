@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <br />
+    <br />
+    <title>House Price Estimator</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trirong"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="img"></div>
+    <h1>House Listings</h1>
+
+    <form id="query-form">
+      <label for="Neighborhood">Neighborhood:</label>
+      <select name="Neighborhood" id="Neighborhood">
+        <option value="collgcr">College Creek</option>
+        <option value="edwards">Edwards</option>
+        <option value="gilbert">Gilbert</option>
+        <option value="names">North Ames</option>
+        <option value="nwames">Northwest Ames</option>
+        <option value="nridght">Northridge Heights</option>
+        <option value="oldtown">Old Town</option>
+        <option value="sawyer">Sawyer</option>
+        <option value="sawyerw">Sawyer West</option>
+        <option value="somerst">Somerset</option></select
+      ><br />
+
+      <label for="BldgType">Building Type:</label>
+      <select name="BldgType" id="BldgType">
+        <option value="1Fam">Single-family</option>
+        <option value="2FmCon">Two-family</option>
+        <option value="Duplx">Duplex</option>
+        <option value="TwnhsE">Townhouse End Unit</option>
+        <option value="TwnhsI">Townhouse Inside Unit</option></select
+      ><br />
+
+      <label for="OverallQual">Overall Quality:</label>
+      <!-- <input type="number" name="OverallQual" id="OverallQual" /> -->
+      <select name="OverallQual" id="OverallQual">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br />
+
+      <label for="LotArea">Lot Area:</label>
+      <input type="number" name="LotArea" id="LotArea" /><br />
+
+      <label for="BedroomAbvGr">Bedrooms:</label>
+      <!-- <input type="number" name="BedroomAbvGr" id="BedroomAbvGr" /><br /> -->
+      <select name="BedroomAbvGr" id="BedroomAbvGr">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option></select
+      ><br />
+
+      <label for="Bathrooms">Bathrooms:</label>
+      <!-- <input type="number" name="Bathrooms" id="Bathrooms" /> -->
+      <select name="Bathrooms" id="Bathrooms">
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4</option>
+      </select>
+      <br />
+
+      <label for="GarageCars">Garage Cars:</label>
+      <!-- <input type="number" name="GarageCars" id="GarageCars" /> -->
+      <select name="GarageCars" id="GarageCars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>Estimated Price Per Square Feet:</h2>
+    <p id="estimated-price"></p>
+
+    <h2>Query Results:</h2>
+    <ul id="query-results"></ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Neighborhood</th>
+          <th>Building Type</th>
+          <th>Lot Area</th>
+          <th>Overall Quality</th>
+          <th>Bedrooms</th>
+          <th>Bathrooms</th>
+          <th>Garage Cars</th>
+          <th>Sale Price ($)</th>
+        </tr>
+      </thead>
+      <tbody id="data-output"></tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
